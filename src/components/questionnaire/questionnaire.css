@@ -70,6 +70,7 @@
 
 .q-question-sub-title {
   font-size: 0.8rem;
+  padding-bottom: 1em;
   color: var(--sub_title);
 }
 
@@ -89,4 +90,64 @@
 
 .ans {
   font-size: 0.4rem;
+}
+
+.q-table {
+  margin-top: 1em;
+  font-family: Poppins;
+  width: 70%;
+  text-align: center;
+  border: 1px solid rgb(192, 192, 192);
+}
+
+.q-table-header {
+  border-bottom: 1px solid rgb(170, 170, 170);
+}
+
+.q-table-header-cell {
+  font-weight: 500;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.q-table-button {
+  margin-top: 2em;
+  width: 100px;
+  height: 40px;
+  color: white;
+  text-align: center;
+  background-color: rgb(21, 197, 56);
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid rgb(21, 197, 56);
+  box-shadow: 0px 0px 3px rgb(106, 106, 106);
+  transition: 0.6s ease-in-out;
+}
+
+.q-table-button-location {
+  margin-left: 25%;
+}
+
+.q-table-button:hover {
+  color: rgb(21, 197, 56);
+  border-color: rgb(21, 197, 56);
+  background-color: white;
+}
+
+.q-table-button-exit {
+  width: 40px;
+  height: 40px;
+  color: red;
+  font-weight: bold;
+  font-size: 0.8rem;
+  font-family: Poppins;
+  padding-right: 8px;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  margin: 5px;
 }

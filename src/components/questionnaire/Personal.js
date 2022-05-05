@@ -5,7 +5,6 @@ import TextField from "@mui/material/TextField";
 import { v4 as uuidv4 } from "uuid";
 
 export default function Personal({ control, errors }) {
-  console.log("render");
   return (
     <div>
       <div className="q-question-title">About You</div>
