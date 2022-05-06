@@ -10,32 +10,35 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.min.css";
+
 export default function AboutUs() {
   const employees = [
     { name: "John Doe", title: "Sales Manager", img: "assets/about/img1.jpg" },
     {
       name: "John Doe",
       title: "CEO of the AGSTC",
-      img: "assets/about/img2.jpg",
+      img: "assets/about/img2.jpg"
     },
     {
       name: "John Doe",
       title: "CTO of the AGSTC",
-      img: "assets/about/img3.jpg",
+      img: "assets/about/img3.jpg"
     },
     { name: "John Doe", title: "Media Manager", img: "assets/about/img4.jpg" },
     { name: "John Doe", title: "Sales Manager", img: "assets/about/img1.jpg" },
     {
       name: "John Doe",
       title: "CEO of the AGSTC",
-      img: "assets/about/img2.jpg",
+      img: "assets/about/img2.jpg"
     },
     {
       name: "John Doe",
       title: "CTO of the AGSTC",
-      img: "assets/about/img3.jpg",
+      img: "assets/about/img3.jpg"
     },
-    { name: "John Doe", title: "Media Manager", img: "assets/about/img4.jpg" },
+    { name: "John Doe", title: "Media Manager", img: "assets/about/img4.jpg" }
   ];
 
   return (
@@ -43,9 +46,16 @@ export default function AboutUs() {
       <Header background={true} page="about-us" />
       <div className="about-container">
         <div className="about-title">AG STC</div>
-        <div className="about-subtitle">
-          Cybersecurity & IT Solutions Company
-        </div>
+        <ScrollAnimation
+          initiallyVisible={true}
+          animateIn="fadeIn"
+          animateOut="fadeOut"
+          duration={1}
+        >
+          <div className="about-subtitle">
+            Cybersecurity & IT Solutions Company
+          </div>
+        </ScrollAnimation>
         <div className="about-content">
           <div className="about-content-text">
             Anim amet aliquip culpa magna fugiat enim occaecat cupidatat
@@ -57,6 +67,7 @@ export default function AboutUs() {
             ex ex exercitation. Ad fugiat nostrud excepteur proidentxcepteur
             proident tempor sitm cupidatat molli. Ad fugiat ex tempor sit.
           </div>
+
           <div className="about-content-image">
             <img
               width={"100%"}

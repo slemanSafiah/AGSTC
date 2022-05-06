@@ -12,68 +12,69 @@ export default function ServicesComp() {
         {
           content: "IT General Control Testing (ITGC)",
           slug: "it-general-control",
-          desc: "IT General Controls (ITGC) - ITGC can be defined as internal controls that assure the secure, stable, and reliable performance of computer hardware, software, and IT personnel connected to financial systems. ITGCs include IT risks associated with areas such as the external IT environment, change management, access controls, data backup and recovery, and third-party providers. One of the key factors about ITGC is the relevance it has on the assurance of automated controls, such as those involved with Sarbanes-Oxley Section 404 audits.In case of the absence of ITGC review, statutory auditors cannot rely upon the IT systems that are being used across the business cycles by the client. The controls tested commonly include:",
+          desc:
+            "IT General Controls (ITGC) - ITGC can be defined as internal controls that assure the secure, stable, and reliable performance of computer hardware, software, and IT personnel connected to financial systems. ITGCs include IT risks associated with areas such as the external IT environment, change management, access controls, data backup and recovery, and third-party providers. One of the key factors about ITGC is the relevance it has on the assurance of automated controls, such as those involved with Sarbanes-Oxley Section 404 audits.In case of the absence of ITGC review, statutory auditors cannot rely upon the IT systems that are being used across the business cycles by the client. The controls tested commonly include:",
           features: [
             {
               title: "Network management : ",
               content:
-                "Network management is the process of administering and managing computer networks. Services provided by this discipline include fault analysis, performance management, provisioning of networks, and maintaining the quality of service. Software that enables network administrators to perform their functions is called network management software.",
+                "Network management is the process of administering and managing computer networks. Services provided by this discipline include fault analysis, performance management, provisioning of networks, and maintaining the quality of service. Software that enables network administrators to perform their functions is called network management software."
             },
             {
               title: "Change management : ",
               content:
-                "Change management is a collective term for all approaches to prepare, support, and help individuals, teams, and organizations in making organizational change.",
+                "Change management is a collective term for all approaches to prepare, support, and help individuals, teams, and organizations in making organizational change."
             },
             {
               title: "Access security controls : ",
               content:
-                "Access control is the selective restriction of access to a place or other resource while access management describes the process.",
+                "Access control is the selective restriction of access to a place or other resource while access management describes the process."
             },
             {
               title: "Access Management controls : ",
               content:
-                "This involves checking the access management controls to verify the confidentiality, integrity, and availability of the system.",
-            },
+                "This involves checking the access management controls to verify the confidentiality, integrity, and availability of the system."
+            }
           ],
           advantages: [
             "RELIABILITY",
             "BENCHMARKING",
             "COST SAVING",
-            "EFFICIENCY",
+            "EFFICIENCY"
           ],
-          image: "./itgc.jpg", //? use a webpack with just require a file which is in the same folder with the component
+          image: "./itgc.jpg" //? use a webpack with just require a file which is in the same folder with the component
         },
         {
           content: "Regulatory audits as per RBI/IRDA/SEBI guidelines",
-          slug: "regulatory-audit",
-        },
-      ],
+          slug: "regulatory-audit"
+        }
+      ]
     },
     {
       title: "Cyber Technology",
       subServices: [
         {
           content: "Vulnerability Assessment",
-          slug: "vulnerability-assessment",
+          slug: "vulnerability-assessment"
         },
         {
           content: "Mobile and Web Application Security",
-          slug: "mobile-and-web-application-security",
+          slug: "mobile-and-web-application-security"
         },
         { content: "Red Team Assessment", slug: "red-team-assessment" },
         {
           content: "Active Directory Penetration Testing",
-          slug: "active-director",
+          slug: "active-director"
         },
         { content: "Configuration Reviews", slug: "configuration-reviews" },
         { content: "Source Code reviews", slug: "source-code-review" },
         { content: "O365 Hardening", slug: "o365-harding" },
         {
           content: "Cyber Security Consultation",
-          slug: "cyber-security-consultation",
+          slug: "cyber-security-consultation"
         },
-        { content: "CISO as a Service", slug: "ciso-service" },
-      ],
+        { content: "CISO as a Service", slug: "ciso-service" }
+      ]
     },
     {
       title: "Cyber Process",
@@ -81,35 +82,35 @@ export default function ServicesComp() {
         { content: "IT Architecture Review", slug: "it-architecture" },
         {
           content: "Cloud Security Assessment",
-          slug: "cloud-security-assessment",
+          slug: "cloud-security-assessment"
         },
         {
           content: "Privacy Impact Assessment",
-          slug: "privacy-impact-assessment",
+          slug: "privacy-impact-assessment"
         },
         { content: "GDPR Assessment", slug: "gdpr-assessment" },
         { content: "IT Audit", slug: "it-audit" },
         {
           content: "ISO 22301 Implementation Assistance",
-          slug: "iso-22301-implementation",
+          slug: "iso-22301-implementation"
         },
         {
           content: "ISO 27001 Implementation Assistance",
-          slug: "iso-27001-implementation",
+          slug: "iso-27001-implementation"
         },
-        { content: "Vendor Risk Assessment", slug: "vendor-risk-assessment" },
-      ],
+        { content: "Vendor Risk Assessment", slug: "vendor-risk-assessment" }
+      ]
     },
     {
       title: "Cyber Forensics",
       subServices: [
         {
           content: "Digital Forensics Readiness Investigation (DFRI)",
-          slug: "digital-forensics-readiness-investigation",
+          slug: "digital-forensics-readiness-investigation"
         },
-        { content: "Incident Response", slug: "incident-response" },
-      ],
-    },
+        { content: "Incident Response", slug: "incident-response" }
+      ]
+    }
   ];
 
   return (
