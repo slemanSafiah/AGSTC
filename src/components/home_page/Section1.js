@@ -39,17 +39,46 @@ export default function Section1() {
         </Carousel>
       </div>
 
-      <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" duration={1}>
+      <ScrollAnimation
+        initiallyVisible={true}
+        animateIn="fadeIn"
+        animateOut="fadeOut"
+        duration={1}
+      >
         <div className="title">AG STC</div>
       </ScrollAnimation>
-      <div className="sub-title">Cyber Security & IT Solution Company</div>
+      <ScrollAnimation
+        initiallyVisible={true}
+        animateIn="fadeIn"
+        animateOut="fadeOut"
+        duration={1}
+        delay={500}
+      >
+        <div className="sub-title">Cyber Security & IT Solution Company</div>
+      </ScrollAnimation>
       <div className="buttons">
-        <a style={{ textDecoration: "none" }} href="/#information">
-          <div className="button-primary">Learn More</div>
-        </a>
-        <Link style={{ textDecoration: "none" }} to="/services">
-          <div className="button-secondary">Services</div>
-        </Link>
+        <ScrollAnimation
+          animateOnce={true}
+          initiallyVisible={true}
+          animateIn="bounceInLeft"
+          duration={1}
+          delay={900}
+        >
+          <a style={{ textDecoration: "none" }} href="/#information">
+            <div className="button-primary">Learn More</div>
+          </a>
+        </ScrollAnimation>
+        <ScrollAnimation
+          animateOnce={true}
+          initiallyVisible={true}
+          animateIn="bounceInLeft"
+          duration={1}
+          delay={500}
+        >
+          <Link style={{ textDecoration: "none" }} to="/services">
+            <div className="button-secondary">Services</div>
+          </Link>
+        </ScrollAnimation>
       </div>
     </div>
   );
