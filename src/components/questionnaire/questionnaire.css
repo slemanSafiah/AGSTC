@@ -151,3 +151,25 @@
   text-align: center;
   margin: 5px;
 }
+
+.q-table-ex {
+  margin-top: 1em;
+  font-family: Poppins;
+  width: 100%;
+  text-align: center;
+  border: 1px solid rgb(192, 192, 192);
+  font-size: 0.8rem;
+}
+
+.q-table-header-cell-ex {
+  font-weight: 400;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.q-table-cell-ex {
+  font-weight: 300;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 0.7rem;
+}

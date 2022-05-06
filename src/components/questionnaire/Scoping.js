@@ -20,11 +20,7 @@ import Select from "@mui/material/Select";
 import InputLabel from "@mui/material/InputLabel";
 import { v4 as uuidv4 } from "uuid";
 import { Controller } from "react-hook-form";
-import { AgGridReact } from "ag-grid-react";
 import { Delete } from "@mui/icons-material";
-
-import "ag-grid-community/dist/styles/ag-grid.css";
-import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 
 const questionsTypes = {
   0: WebApplication,
@@ -67,7 +63,6 @@ const deviceTypes = [
   "Others",
 ];
 
-console.log("render");
 export default function Scoping({ type, control, checked, setChecked }) {
   const [questions, setQuestions] = useState(questionsTypes[type]);
 
@@ -83,12 +78,6 @@ export default function Scoping({ type, control, checked, setChecked }) {
       Description: "Palo Alto NextGen Firewalls",
       Quantity: 2,
     },
-  ]);
-
-  const [columnDefs] = useState([
-    { field: "Type" },
-    { field: "Description" },
-    { field: "Quantity" },
   ]);
 
   const [data, setData] = useState([]);
@@ -160,8 +149,8 @@ export default function Scoping({ type, control, checked, setChecked }) {
         </div>
 
         <div className="q-question-text">Some examples below.</div>
-        <div className="ag-theme-alpine" style={{ height: 200, width: 530 }}>
-          <AgGridReact rowData={rowData} columnDefs={columnDefs}></AgGridReact>
+        <div style={{ height: 200, width: 600 }}>
+          <TableExample rows={rowData} />
         </div>
 
         <div className="q-question">1. Device Type & Quantity</div>
@@ -177,7 +166,7 @@ export default function Scoping({ type, control, checked, setChecked }) {
             {data.map((row) => (
               <tr>
                 {Object.values(row).map((cell) => (
-                  <td>{cell}</td>
+                  <td className="q-table-cell-ex">{cell}</td>
                 ))}
               </tr>
             ))}
@@ -469,5 +458,28 @@ function TableText({ control, desc, num }) {
         />
       )}
     />
+  );
+}
+
+function TableExample({ rows }) {
+  return (
+    <table className="q-table-ex">
+      <thead className="q-table-header">
+        <tr>
+          <th className="q-table-header-cell-ex">Type</th>
+          <th className="q-table-header-cell-ex">Description</th>
+          <th className="q-table-header-cell-ex">Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((row) => (
+          <tr>
+            {Object.values(row).map((cell) => (
+              <td className="q-table-cell-ex">{cell}</td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 }

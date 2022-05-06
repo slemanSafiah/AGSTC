@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.min.css";
 
 export default function Section1() {
   return (
@@ -25,15 +27,6 @@ export default function Section1() {
               />
             </div>
           </Carousel.Item>
-          {/* <Carousel.Item>
-            <div className="section-2">
-              <img
-                className="d-block w-100"
-                src="assets/backgrounf-3.jpg"
-                alt="Second slide"
-              />
-            </div>
-          </Carousel.Item> */}
           <Carousel.Item>
             <div className="section-2">
               <img
@@ -46,7 +39,9 @@ export default function Section1() {
         </Carousel>
       </div>
 
-      <div className="title">AG STC</div>
+      <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" duration={1}>
+        <div className="title">AG STC</div>
+      </ScrollAnimation>
       <div className="sub-title">Cyber Security & IT Solution Company</div>
       <div className="buttons">
         <a style={{ textDecoration: "none" }} href="/#information">
