@@ -13,13 +13,14 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
+import emailjs from "@emailjs/browser";
 
 const formSchema = yup.object().shape({
   "Organization Name": yup.string().required(),
   "Last Name": yup.string().required(),
   "First Name": yup.string().required(),
   "Phone Number": yup.string().min(8).required(),
-  Email: yup.string().email().required(),
+  Email: yup.string().email().required()
 });
 
 export default function Form() {
@@ -32,10 +33,10 @@ export default function Form() {
     handleSubmit,
     reset,
     control,
-    formState: { errors },
+    formState: { errors }
   } = useForm({
     defaultValues: {},
-    resolver: yupResolver(formSchema),
+    resolver: yupResolver(formSchema)
   });
 
   const handleSelect = (event) => {
@@ -48,15 +49,72 @@ export default function Form() {
       <form
         onSubmit={handleSubmit(async (data) => {
           console.log("waiting ...");
-          let res = await axios({
-            method: "post",
-            url: `https://www.google.com/recaptcha/api/siteverify?secret=6LffZb4fAAAAAJ_YKcjWsETzWZDOPVzjU3XUaVSp&response=${clientToken}`,
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-            },
-          });
-          if (res.data.success) {
-            console.log("Done", data);
+          // let res = await axios({
+          //   method: "post",
+          //   url: `https://www.google.com/recaptcha/api/siteverify?secret=6LffZb4fAAAAAJ_YKcjWsETzWZDOPVzjU3XUaVSp&response=${clientToken}`,
+          //   headers: {
+          //     "Content-Type": "application/x-www-form-urlencoded"
+          //   }
+          // });
+
+          // if (res.data.success) {
+          if (true) {
+            let modifiedData = [];
+            function divIt(obj) {
+              if (typeof obj === "object") {
+                let keys = Object.keys(obj);
+                console.log(keys);
+                keys.forEach((key) => {
+                  if (typeof obj[key] === "object") {
+                    Object.keys(obj[key]).forEach((subObj) => {
+                      modifiedData.push(
+                        `${subObj} : ${obj[key][subObj]} \t\t\n`
+                      );
+                    });
+                  }
+                  if (
+                    typeof obj[key] === "string" ||
+                    (typeof obj[key] === "boolean" && obj[key] === true)
+                  ) {
+                    modifiedData.push(`${key} : ${obj[key]} \t\t\n`);
+                  }
+                });
+              } else {
+              }
+            }
+
+            Object.keys(data).forEach((key) => {
+              divIt(data[key]);
+              if (typeof data[key] === "string") {
+                modifiedData.push(`${key} : ${data[key]}`);
+              }
+            });
+
+            emailjs
+              .send(
+                "service_0fvgqqp",
+                "template_xlo9jmg",
+                {
+                  from_name: data["First Name"] + " " + data["Last Name"],
+                  from_email: data["Email"],
+                  message: modifiedData,
+                  from_subject:
+                    "Questionnaire Request From " + data["Organization Name"],
+                  email: "slemansafiah43@gmail.com"
+                },
+                "user_iPj4aB9m9VSQ5BsiqgrK3"
+              )
+              .then(
+                function (response) {
+                  console.log("SUCCESS!", response.status, response.text);
+                },
+                function (error) {
+                  console.log("FAILED...", error);
+                }
+              );
+            reset({});
+            setType("");
+            setSelected(false);
           } else {
             console.log("Error in Recaptcha");
           }
@@ -126,7 +184,7 @@ export default function Form() {
                   border: "none",
                   borderRadius: "2px",
                   padding: "6px 26px",
-                  boxShadow: "0px 1px 3px rgb(50,50,50)",
+                  boxShadow: "0px 1px 3px rgb(50,50,50)"
                 }}
                 label="SEND"
                 type="submit"
@@ -179,8 +237,10 @@ export default function Form() {
                     MPLS: false,
                     "Leaded Line": false,
                     "IPSec VPN": false,
-                    "Other Connections": false,
+                    "Other Connections": false
                   });
+                  setType("");
+                  setSelected(false);
                 }}
                 style={{
                   backgroundColor: "#1a1a1a",
@@ -191,7 +251,7 @@ export default function Form() {
                   border: "none",
                   borderRadius: "2px",
                   padding: "6px 26px",
-                  boxShadow: "0px 1px 3px rgb(50,50,50)",
+                  boxShadow: "0px 1px 3px rgb(50,50,50)"
                 }}
                 label="RESET"
                 type="button"
