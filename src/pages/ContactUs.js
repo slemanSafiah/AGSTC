@@ -10,12 +10,13 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
   faLinkedin,
-  faTwitter,
+  faTwitter
 } from "@fortawesome/free-brands-svg-icons";
+import emailjs from "@emailjs/browser";
 
 export default function ContactUs() {
-  const { handleSubmit, control } = useForm({
-    defaultValues: { firstName: "", lastName: "", email: "", message: "" },
+  const { handleSubmit, reset, control } = useForm({
+    defaultValues: { firstName: "", lastName: "", email: "", message: "" }
   });
 
   return (
@@ -26,6 +27,28 @@ export default function ContactUs() {
           <form
             onSubmit={handleSubmit((data) => {
               console.log(data);
+              emailjs
+                .send(
+                  "service_0fvgqqp",
+                  "template_pkxlq1f",
+                  {
+                    from_name: data.firstName + " " + data.lastName,
+                    from_email: data.email,
+                    message: data.message,
+                    from_subject: "Contact US Message",
+                    email: "slemansafiah43@gmail.com"
+                  },
+                  "user_iPj4aB9m9VSQ5BsiqgrK3"
+                )
+                .then(
+                  function (response) {
+                    console.log("SUCCESS!", response.status, response.text);
+                  },
+                  function (error) {
+                    console.log("FAILED...", error);
+                  }
+                );
+              reset({ firstName: "", lastName: "", email: "", message: "" });
             })}
           >
             <div className="contact-title">Contact Us</div>
@@ -40,7 +63,7 @@ export default function ContactUs() {
                       marginBlockEnd: 3,
                       paddingInlineEnd: 3,
                       mt: 2,
-                      minWidth: 120,
+                      minWidth: 120
                     }}
                     id="firstName"
                     label="First Name"
@@ -75,7 +98,7 @@ export default function ContactUs() {
                     marginBlockEnd: 3,
                     mt: 2,
                     minWidth: 120,
-                    width: "100%",
+                    width: "100%"
                   }}
                   id="email"
                   label="E-Mail"
@@ -94,7 +117,7 @@ export default function ContactUs() {
                     marginBlockEnd: 4,
                     mt: 2,
                     minWidth: 120,
-                    width: "100%",
+                    width: "100%"
                   }}
                   id="messsage"
                   label="Message"
@@ -116,7 +139,7 @@ export default function ContactUs() {
                   border: "none",
                   borderRadius: "2px",
                   padding: "6px 26px",
-                  boxShadow: "0px 1px 3px rgb(50,50,50)",
+                  boxShadow: "0px 1px 3px rgb(50,50,50)"
                 }}
                 label="SEND"
                 type="submit"
@@ -126,7 +149,7 @@ export default function ContactUs() {
           <div
             style={{
               paddingTop: "4em",
-              fontFamily: "Poppins",
+              fontFamily: "Poppins"
             }}
           >
             <Stack columnGap={16} direction={"row"}>

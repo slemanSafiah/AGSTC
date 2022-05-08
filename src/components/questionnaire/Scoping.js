@@ -29,7 +29,7 @@ const questionsTypes = {
   3: InternalNetwork,
   4: ExternalNetwork,
   5: CyberSecurity,
-  6: CompanySize,
+  6: CompanySize
 };
 
 const questionnaireTitle = {
@@ -39,7 +39,7 @@ const questionnaireTitle = {
   3: "Internal Network Pentest Scoping",
   4: "External Network Pentest Scoping",
   5: "Cyber Threat Hunting Scoping",
-  6: "SIEM Solution Scoping",
+  6: "SIEM Solution Scoping"
 };
 
 const deviceTypes = [
@@ -60,7 +60,7 @@ const deviceTypes = [
   "PAM",
   "Load Balancers",
   "Web Application Firewall",
-  "Others",
+  "Others"
 ];
 
 export default function Scoping({ type, control, checked, setChecked }) {
@@ -70,14 +70,14 @@ export default function Scoping({ type, control, checked, setChecked }) {
     {
       Type: "Windows",
       Description: "Windows Active Directory Servers",
-      Quantity: 3,
+      Quantity: 3
     },
     { Type: "Load Balancers", Description: "F5 Load Balancers", Quantity: 3 },
     {
       Type: "NextGen Firewalls",
       Description: "Palo Alto NextGen Firewalls",
-      Quantity: 2,
-    },
+      Quantity: 2
+    }
   ]);
 
   const [data, setData] = useState([]);
@@ -127,7 +127,7 @@ export default function Scoping({ type, control, checked, setChecked }) {
       MPLS: false,
       "Leaded Line": false,
       "IPSec VPN": false,
-      "Other Connections": false,
+      "Other Connections": false
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [type]);
@@ -177,7 +177,7 @@ export default function Scoping({ type, control, checked, setChecked }) {
           className={`q-table-button ${
             data.length === 0 ? "q-table-button-location" : ""
           }`}
-          onClick={() => {
+          onClick={(e) => {
             setData((prev) => {
               let temp = prev;
               let idx = uuidv4().split("-").join("");
@@ -192,7 +192,7 @@ export default function Scoping({ type, control, checked, setChecked }) {
                     num={idx}
                     size="small"
                   />
-                ),
+                )
               });
               return temp;
             });
@@ -279,7 +279,7 @@ function QuestionHandler({ question, control, checked, setChecked }) {
             style={{
               display: "flex",
               flexDirection: "column",
-              fontSize: "0.8rem",
+              fontSize: "0.8rem"
             }}
           >
             {question.answers.map((ans) => (
@@ -291,7 +291,7 @@ function QuestionHandler({ question, control, checked, setChecked }) {
                   fontSize: "0.7rem",
                   mt: 0,
                   minWidth: 120,
-                  width: "40%",
+                  width: "40%"
                 }}
                 label={ans}
                 labelPlacement="end"
@@ -336,7 +336,7 @@ function QuestionHandler({ question, control, checked, setChecked }) {
                   mt: 0,
                   minWidth: 120,
                   width: "40%",
-                  color: "rgb(85, 85, 85)",
+                  color: "rgb(85, 85, 85)"
                 }}
                 // aria-label={question.question}
                 // name="radio-buttons-group"
@@ -370,7 +370,7 @@ function QuestionHandler({ question, control, checked, setChecked }) {
                     mt: 1,
                     minWidth: 120,
                     width: "40%",
-                    color: "rgb(85, 85, 85)",
+                    color: "rgb(85, 85, 85)"
                   }}
                   // value={1}
                   defaultValue="1"
@@ -421,7 +421,7 @@ function TableType({ control, num, data }) {
               mb: 1,
               minWidth: 120,
               width: "70%",
-              color: "rgb(85, 85, 85)",
+              color: "rgb(85, 85, 85)"
             }}
             size="small"
             labelId="demo-simple-select-label"
