@@ -65,7 +65,7 @@ const deviceTypes = [
 
 export default function Scoping({ type, control, checked, setChecked }) {
   const [questions, setQuestions] = useState(questionsTypes[type]);
-
+  const [data, setData] = useState([]);
   const [rowData] = useState([
     {
       Type: "Windows",
@@ -79,8 +79,6 @@ export default function Scoping({ type, control, checked, setChecked }) {
       Quantity: 2
     }
   ]);
-
-  const [data, setData] = useState([]);
 
   useEffect(() => {
     setQuestions(questionsTypes[type]);
@@ -134,74 +132,13 @@ export default function Scoping({ type, control, checked, setChecked }) {
 
   if (type === 6) {
     return (
-      <div>
-        <div className="q-question-title">{questionnaireTitle[type]}</div>
-        <div className="q-question-sub-title">
-          please note that all fields are{" "}
-          <span style={{ color: "red" }}>mandatory</span> please enter 'NA' or
-          choose 'None' if a field is not applicable to you.
-        </div>
-        <div className="q-question-sub-title">
-          Please add the devices from which SIEM will collect logs. Please enter
-          device type, a description and the quantity. Add as many entries as
-          you have by using the <span style={{ color: "blue" }}>"Add New"</span>{" "}
-          Button. If you don't find the device type in the list, select "Other".
-        </div>
-
-        <div className="q-question-text">Some examples below.</div>
-        <div style={{ height: 200, width: 600 }}>
-          <TableExample rows={rowData} />
-        </div>
-
-        <div className="q-question">1. Device Type & Quantity</div>
-        <table className="q-table">
-          <thead className="q-table-header">
-            <tr>
-              <th className="q-table-header-cell">Type</th>
-              <th className="q-table-header-cell">Description</th>
-              <th className="q-table-header-cell">Quantity</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((row) => (
-              <tr>
-                {Object.values(row).map((cell) => (
-                  <td className="q-table-cell-ex">{cell}</td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-
-        <button
-          className={`q-table-button ${
-            data.length === 0 ? "q-table-button-location" : ""
-          }`}
-          onClick={(e) => {
-            setData((prev) => {
-              let temp = prev;
-              let idx = uuidv4().split("-").join("");
-              console.log(idx);
-              temp.push({
-                type: <TableType control={control} num={idx} data={setData} />,
-                desc: <TableText control={control} desc={true} num={idx} />,
-                quantity: (
-                  <TableText
-                    control={control}
-                    desc={false}
-                    num={idx}
-                    size="small"
-                  />
-                )
-              });
-              return temp;
-            });
-          }}
-        >
-          Add New{" "}
-        </button>
-        <CompanySizing control={control} />
-      </div>
+      <SIEM
+        rowData={rowData}
+        data={data}
+        setData = {setData}
+        control={control}
+        title={questionnaireTitle[type]}
+      />
     );
   }
 
@@ -481,5 +418,95 @@ function TableExample({ rows }) {
         ))}
       </tbody>
     </table>
+  );
+}
+
+function SIEM({ rowData, data, setData,control, title }) {
+
+  return (
+    <div>
+      <div className="q-question-title">{title}</div>
+      <div className="q-question-sub-title">
+        please note that all fields are{" "}
+        <span style={{ color: "red" }}>mandatory</span> please enter 'NA' or
+        choose 'None' if a field is not applicable to you.
+      </div>
+      <div className="q-question-sub-title">
+        Please add the devices from which SIEM will collect logs. Please enter
+        device type, a description and the quantity. Add as many entries as you
+        have by using the <span style={{ color: "blue" }}>"Add New"</span>{" "}
+        Button. If you don't find the device type in the list, select "Other".
+      </div>
+
+      <div className="q-question-text">Some examples below.</div>
+      <div style={{ height: 200, width: 600 }}>
+        <TableExample rows={rowData} />
+      </div>
+
+      <div className="q-question">1. Device Type & Quantity</div>
+      <table className="q-table">
+        <thead className="q-table-header">
+          <tr>
+            <th className="q-table-header-cell">Type</th>
+            <th className="q-table-header-cell">Description</th>
+            <th className="q-table-header-cell">Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((row) => (
+            <tr>
+              {Object.values(row).map((cell) => (
+                <td className="q-table-cell-ex">{cell}</td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <div
+        className={`q-table-button ${
+          data.length === 0 ? "q-table-button-location" : ""
+        }`}
+        onClick={(e) => {
+          setData((prev) => {
+            let temp = prev;
+            let idx = uuidv4().split("-").join("");
+            console.log(idx);
+            temp.push({
+              type: (
+                <TableType
+                  control={control}
+                  key={uuidv4()}
+                  num={idx}
+                  data={setData}
+                />
+              ),
+              desc: (
+                <TableText
+                  control={control}
+                  key={uuidv4()}
+                  desc={true}
+                  num={idx}
+                />
+              ),
+              quantity: (
+                <TableText
+                  control={control}
+                  key={uuidv4()}
+                  desc={false}
+                  num={idx}
+                  size="small"
+                />
+              )
+            });
+            return temp;
+          });
+          console.log(data);
+        }}
+      >
+        Add New{" "}
+      </div>
+      <CompanySizing control={control} />
+    </div>
   );
 }

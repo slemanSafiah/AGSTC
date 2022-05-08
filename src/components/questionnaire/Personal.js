@@ -37,7 +37,7 @@ export default function Personal({ control, errors }) {
           width: "40%",
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between",
+          justifyContent: "space-between"
         }}
       >
         <Controller
