@@ -164,7 +164,7 @@ export default function Scoping({ type, control, checked, setChecked }) {
           </thead>
           <tbody>
             {data.map((row) => (
-              <tr>
+              <tr key={uuidv4()}>
                 {Object.values(row).map((cell) => (
                   <td className="q-table-cell-ex">{cell}</td>
                 ))}
@@ -173,33 +173,30 @@ export default function Scoping({ type, control, checked, setChecked }) {
           </tbody>
         </table>
 
-        <button
+        <div
           className={`q-table-button ${
             data.length === 0 ? "q-table-button-location" : ""
           }`}
           onClick={(e) => {
-            setData((prev) => {
-              let temp = prev;
-              let idx = uuidv4().split("-").join("");
-              console.log(idx);
-              temp.push({
-                type: <TableType control={control} num={idx} data={setData} />,
-                desc: <TableText control={control} desc={true} num={idx} />,
-                quantity: (
-                  <TableText
-                    control={control}
-                    desc={false}
-                    num={idx}
-                    size="small"
-                  />
-                )
-              });
-              return temp;
-            });
+            e.preventDefault();
+            let idx = uuidv4().split("-").join("");
+            let temp = {
+              type: <TableType control={control} num={idx} data={setData} />,
+              desc: <TableText control={control} desc={true} num={idx} />,
+              quantity: (
+                <TableText
+                  control={control}
+                  desc={false}
+                  num={idx}
+                  size="small"
+                />
+              )
+            };
+            setData([...data, temp]);
           }}
         >
           Add New{" "}
-        </button>
+        </div>
         <CompanySizing control={control} />
       </div>
     );
