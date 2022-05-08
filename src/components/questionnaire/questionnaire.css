@@ -111,6 +111,7 @@
 }
 
 .q-table-button {
+  cursor: pointer;
   margin-top: 2em;
   width: 100px;
   height: 40px;

@@ -181,7 +181,7 @@ export default function Scoping({ type, control, checked, setChecked }) {
             e.preventDefault();
             let idx = uuidv4().split("-").join("");
             let temp = {
-              type: <TableType control={control} num={idx} data={setData} />,
+              type: <TableType control={control} num={idx} setData={setData} data={data} />,
               desc: <TableText control={control} desc={true} num={idx} />,
               quantity: (
                 <TableText
@@ -390,18 +390,17 @@ function QuestionHandler({ question, control, checked, setChecked }) {
   }
 }
 
-function TableType({ control, num, data }) {
+function TableType({ control, num, data, setData }) {
   return (
     <div>
       <button
         className="q-table-button-exit"
         onClick={(e) => {
-          data((prev) => {
-            let temp = prev;
-            let idx = temp.findIndex((ele) => ele.type.props.num === num);
-            temp.splice(idx, 1);
-            return temp;
-          });
+          e.preventDefault();
+          let idx = data.findIndex((ele) => ele.type.props.num === num);
+          let temp = data;
+          temp.splice(idx, 1);
+          setData(temp);
         }}
       >
         <Delete color="inherit" />
