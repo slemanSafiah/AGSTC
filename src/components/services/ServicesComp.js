@@ -7,7 +7,7 @@ import "./services.css";
 export default function ServicesComp() {
   let services = [
     {
-      title: "Audit and Compliance",
+      title: "Cyber Security Solutions",
       subServices: [
         {
           content: "IT General Control Testing (ITGC)",
@@ -47,11 +47,47 @@ export default function ServicesComp() {
         {
           content: "Regulatory audits as per RBI/IRDA/SEBI guidelines",
           slug: "regulatory-audit"
+        },
+        {
+          content: "Data Leakage Prevention (DLP)",
+          slug: "data-leagage-prevention"
+        },
+        {
+          content: "Privilege Access Management",
+          slug: "preivilege-access-management"
+        },
+        {
+          content: "Web Application Firewall",
+          slug: "web-application-firewall"
+        },
+        {
+          content: "Network Detection and Response (NDR)",
+          slug: "network-detection-response"
+        },
+        {
+          content: "Zero Trust Remote Access VPN",
+          slug: "zero-trust-remote-access-vpn"
+        },
+        {
+          content: "File Integrity Monitoring (FIM)",
+          slug: "file-integrity-monitoring"
+        },
+        {
+          content: "Security Information and Event Management (SIEM)",
+          slug: "siem"
+        },
+        {
+          content: "Cyber Security Awareness Platform and Phishing Simulation",
+          slug: "cyber-security-awareness-platform"
+        },
+        {
+          content: "Digital Risk Protection and Intelligence",
+          slug: "digital-risk-protection"
         }
       ]
     },
     {
-      title: "Cyber Technology",
+      title: "Technology advisory Services",
       subServices: [
         {
           content: "Vulnerability Assessment",
@@ -61,7 +97,6 @@ export default function ServicesComp() {
           content: "Mobile and Web Application Security",
           slug: "mobile-and-web-application-security"
         },
-        { content: "Red Team Assessment", slug: "red-team-assessment" },
         {
           content: "Active Directory Penetration Testing",
           slug: "active-director"
@@ -73,21 +108,7 @@ export default function ServicesComp() {
           content: "Cyber Security Consultation",
           slug: "cyber-security-consultation"
         },
-        { content: "CISO as a Service", slug: "ciso-service" }
-      ]
-    },
-    {
-      title: "Cyber Process",
-      subServices: [
-        { content: "IT Architecture Review", slug: "it-architecture" },
-        {
-          content: "Cloud Security Assessment",
-          slug: "cloud-security-assessment"
-        },
-        {
-          content: "Privacy Impact Assessment",
-          slug: "privacy-impact-assessment"
-        },
+        { content: "CISO as a Service", slug: "ciso-service" },
         { content: "GDPR Assessment", slug: "gdpr-assessment" },
         { content: "IT Audit", slug: "it-audit" },
         {
@@ -102,13 +123,40 @@ export default function ServicesComp() {
       ]
     },
     {
-      title: "Cyber Forensics",
+      title: "Cyber Process",
+      subServices: [
+        { content: "IT Architecture Review", slug: "it-architecture" },
+        {
+          content: "Cloud Security Assessment",
+          slug: "cloud-security-assessment"
+        },
+        {
+          content: "Privacy Impact Assessment",
+          slug: "privacy-impact-assessment"
+        }
+      ]
+    },
+    {
+      title: "Security Operation Center",
       subServices: [
         {
           content: "Digital Forensics Readiness Investigation (DFRI)",
           slug: "digital-forensics-readiness-investigation"
         },
-        { content: "Incident Response", slug: "incident-response" }
+        {
+          content: "Incident Handling and Response",
+          slug: "incident-handling-and-response"
+        },
+        { content: "Web Application Audit", slug: "web-application-audit" },
+        {
+          content: "Vulnerability Assessment and Penetration Testing (VAPT)",
+          slug: "vapt"
+        },
+        {
+          content: "Mobile Application Penetration Testing (MAPT)",
+          slug: "mapt"
+        },
+        { content: "Red Team Assessment", slug: "red-team-assessment" }
       ]
     }
   ];
