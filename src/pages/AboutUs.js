@@ -18,24 +18,24 @@ export default function AboutUs() {
     { name: "John Doe", title: "Sales Manager", img: "assets/about/img1.jpg" },
     {
       name: "John Doe",
-      title: "CEO of the AGSTC",
+      title: "CEO of the AGCTS",
       img: "assets/about/img2.jpg"
     },
     {
       name: "John Doe",
-      title: "CTO of the AGSTC",
+      title: "CTO of the AGCTS",
       img: "assets/about/img3.jpg"
     },
     { name: "John Doe", title: "Media Manager", img: "assets/about/img4.jpg" },
     { name: "John Doe", title: "Sales Manager", img: "assets/about/img1.jpg" },
     {
       name: "John Doe",
-      title: "CEO of the AGSTC",
+      title: "CEO of the AGCTS",
       img: "assets/about/img2.jpg"
     },
     {
       name: "John Doe",
-      title: "CTO of the AGSTC",
+      title: "CTO of the AGCTS",
       img: "assets/about/img3.jpg"
     },
     { name: "John Doe", title: "Media Manager", img: "assets/about/img4.jpg" }
@@ -45,7 +45,7 @@ export default function AboutUs() {
     <div>
       <Header background={true} page="about-us" />
       <div className="about-container">
-        <div className="about-title">AG STC</div>
+        <div className="about-title">AG CTS</div>
         <ScrollAnimation
           initiallyVisible={true}
           animateIn="fadeIn"
@@ -78,7 +78,7 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-      <div className="emp-title">Team Members of AGSTC</div>
+      <div className="emp-title">Team Members of AGCTS</div>
       <div className="about-slider">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}

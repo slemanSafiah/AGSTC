@@ -5,13 +5,13 @@ export default function Footer() {
     <div className="footer-container">
       <div className="footer">
         <div>
-          <div className="footer-title">AGSTC</div>
+          <div className="footer-title">AGCTS</div>
           <div className="footer-desc">Cybersecurity & IT Solution Company</div>
         </div>
         <div className="footer-contact">
           <div>Office phone : +9714 3434 068</div>
-          <div>Sales : sales@agstc.ae</div>
-          <div>Support : support-ag@agstc.ae</div>
+          <div>Sales : sales@agcts.ae</div>
+          <div>Support : support-ag@agcts.ae</div>
           <div>
             office phone : Monday to Friday from 8:30AM - 6:00PM (GMT+4)
           </div>

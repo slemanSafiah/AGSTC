@@ -5,7 +5,7 @@ export default function Header({ page, background }) {
   console.log(page);
   return (
     <div className={` ${background ? "header-background" : "header"}`}>
-      <div className="logo">AG STC</div>
+      <div className="logo">AG CTS</div>
       <nav className="nav-bar">
         <ul>
           <Link

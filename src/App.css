@@ -661,3 +661,21 @@
   letter-spacing: 1px;
   margin-bottom: 0.5em;
 }
+
+/* ? Form */
+.contact-us-button {
+  background-color: #2b9630;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 2px;
+  padding: 6px 26px;
+  box-shadow: 0px 1px 3px rgb(50, 50, 50);
+  transition: 0.3s ease-in-out;
+}
+
+.contact-us-button:hover {
+  background-color: #2e7d32;
+}
