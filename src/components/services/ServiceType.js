@@ -3,11 +3,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Autoplay, Pagination, Scrollbar, A11y } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import "swiper/css/autoplay";
 
 import "./swiper.css";
 
@@ -26,10 +27,12 @@ export default function ServiceType({ title, services, number }) {
       </div>
       <div className="sr-type-slider">
         <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           slidesPerView={4}
           spaceBetween={0}
           navigation
+          autoplay={{ delay: 2000 }}
+          loop={true}
         >
           {services.map((service) => (
             <SwiperSlide>

@@ -5,11 +5,10 @@ import "animate.css/animate.min.css";
 export default function SecurityProgramService({ title, content, mar }) {
   return (
     <ScrollAnimation
-      animateIn="bounceInLeft"
+      animateIn="fadeIn"
       animateOut="fadeOut"
-      // animateOnce={true}
-      duration={1}
-      delay={mar * 10}
+      duration={0.5}
+      animateOnce
     >
       <div style={{ marginLeft: `${mar}em` }} className="sp-service">
         <div className="sp-service-title">{title}</div>

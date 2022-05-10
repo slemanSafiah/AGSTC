@@ -15,6 +15,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 import emailjs from "@emailjs/browser";
 
+import Notification from "../Notification";
+
 const formSchema = yup.object().shape({
   "Organization Name": yup.string().required(),
   "Last Name": yup.string().required(),
@@ -28,7 +30,7 @@ export default function Form() {
   const [type, setType] = useState("");
   const [checked, setChecked] = useState({});
   const [clientToken, setClientToken] = useState("");
-
+  const [openNotification, setOpenNotification] = useState(false);
   const {
     handleSubmit,
     reset,
@@ -38,6 +40,14 @@ export default function Form() {
     defaultValues: {},
     resolver: yupResolver(formSchema)
   });
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpenNotification(false);
+  };
 
   const handleSelect = (event) => {
     setType(event.target.value);
@@ -115,6 +125,7 @@ export default function Form() {
             reset({});
             setType("");
             setSelected(false);
+            setOpenNotification(true);
           } else {
             console.log("Error in Recaptcha");
           }
@@ -261,6 +272,11 @@ export default function Form() {
             </div>
           </Stack>
         </div>
+        <Notification
+          message={"Questionnaire sent to us"}
+          open={openNotification}
+          handleClose={handleClose}
+        />
       </form>
     </div>
   );
