@@ -243,35 +243,256 @@ export default function ServicesComp() {
       subServices: [
         {
           content: "Vulnerability Assessment",
-          slug: "vulnerability-assessment"
+          slug: "vulnerability-assessment",
+          desc:
+            "A vulnerability assessment is a systematic review of security weaknesses in an information system. It evaluates if the system is susceptible to any known vulnerabilities, assigns severity levels to those vulnerabilities, and recommends remediation or mitigation, if and whenever needed. There are several types of vulnerability assessments. These include: ",
+          features: [
+            {
+              title: "Host assessment :",
+              content:
+                "The assessment of critical servers, which may be vulnerable to attacks if not adequately tested or not generated from a tested machine image."
+            },
+            {
+              title: "Network and wireless assessment :",
+              content:
+                "The assessment of policies and practices to prevent unauthorized access to private or public networks and network-accessible resources."
+            },
+            {
+              title: "Database assessment :",
+              content:
+                "The assessment of databases or big data systems for vulnerabilities and misconfigurations, identifying rogue databases or insecure dev/test environments, and classifying sensitive data across an organization’s infrastructure."
+            },
+            {
+              title: "Application scans :",
+              content:
+                "The identifying of security vulnerabilities in web applications and their source code by automated scans on the front-end or static/dynamic analysis of source code."
+            }
+          ],
+          advantages: [
+            "EFFECTIVENESS OF CURRENT SECURITY SAFEGUARDS",
+            "PROVIDE A QUAANTIFIABLE VALUE TO THE RISK INTERNAL SYSTEM"
+          ]
         },
         {
           content: "Mobile and Web Application Security",
-          slug: "mobile-and-web-application-security"
+          slug: "mobile-and-web-application-security",
+          desc:
+            "Mobile application security focuses on the software security posture of mobile apps on various platforms like Android, iOS, and Windows Phone. This covers applications that run both on mobile phones as well as tablets ,where Web application security (also known as Web AppSec) is the idea of building websites to function as expected, even when they are under attack. The concept involves a collection of security controls engineered into a Web application to protect its assets from potentially malicious agents.",
+          advantages: [
+            "PROTECT CONFIDENTIAL AND PRIVATE DATA",
+            "PROTECT FROM DATA LOSS",
+            "PROTECT FROM MALWARE AND VIRUS ATTACKS"
+          ]
         },
         {
           content: "Active Directory Penetration Testing",
-          slug: "active-director"
+          slug: "active-directory",
+          desc:
+            "“Active Directory” Called as “AD” is a directory service that Microsoft developed for the Windows domain network. Using it you can to control domain computers and services that are running on every node of your domain.The importance of Active Directory in an enterprise cannot be stressed enough. Used by more than 90% of Fortune 1000 companies, the all-pervasive AD is the focal point for adversaries. Still, when it comes to AD security, there is a large gap of knowledge which security professionals and administrators struggle to fill. Over the years, we have taught numerous professionals in real world trainings on AD security and always found that there is a lack of quality material and specially, dearth of practice lab where one can practice AD attacks in a controlled environment.",
+          advantages: [
+            "ESTABLISH TRUST WITH YOUR CLIENTELE",
+            "GAIN VALUABLE INSIGHTS INTO YOUR DIGITAL SYSTEMS"
+          ]
         },
-        { content: "Configuration Reviews", slug: "configuration-reviews" },
-        { content: "Source Code reviews", slug: "source-code-review" },
-        { content: "O365 Hardening", slug: "o365-harding" },
+        {
+          content: "Configuration Reviews",
+          slug: "configuration-reviews",
+          desc:
+            "A Secure Configuration review is a detailed review and verification of configuration settings of IT infrastructure components including systems, network devices & applications to measure the security effectiveness of the IT environment.ypically, when deploying, maintaining or enhancing computing systems/network/network security devices, the expected secure configuration settings may not be implemented or maybe missed. Any poorly configured component of the IT environment then becomes a weak link that may allow adversaries to gain unauthorized access, leading to possible outages and security breaches. Therefore, periodically evaluating the secure configuration of the IT environment is vital to ensure ongoing security within the organization. A typical secure configuration review activity is conducted in a white-box mode where the assessment team have access to the in-scope IT infrastructure configuration files to identify misconfigurations.",
+          advantages: [
+            "HELPS ENSURE THAT CORPORATE SYSTEM BUILD FOR SERVERS, WORKSTATION, LAPTOPS ... ARE CONFIGURED SECURELY"
+          ]
+        },
+        {
+          content: "Source Code reviews",
+          slug: "source-code-review",
+          desc:
+            "A secure code review is a specialized task involving manual and/or automated review of an application's source code in an attempt to identify security-related weaknesses (flaws) in the code. A secure code review does not attempt to identify every issue in the code, but instead looks to provide insight into what types of problems exist and to help the developers of the application understand what classes of issues are present. The goal is to arm the developers with information to help them make the application's source code more sound and secure.",
+          advantages: [
+            "AUTHENTICATION",
+            "AUTHORIZATION",
+            "SESSION MANAGEMENT",
+            "DATA VALIDATION",
+            "ERROR HANDLING"
+          ]
+        },
+        {
+          content: "O365 Hardening",
+          slug: "o365-harding",
+          desc:
+            "Effective security is about balancing accessibility with data protection. Too much of either can compromise your systems or your processes. Luckily Microsoft has provided enhanced capabilities to both protect your privacy while allowing your team to limitlessly collaborate. Learn more about Microsoft Office 365 Hardening below.",
+          features: [
+            {
+              title: "Azure Active Directory :",
+              content:
+                "Restrict access permissions and block insecure authentication protocols. Proper limitations for your team will help ensure they don’t accidentally grant permission to access your data to a malicious actor. Fake software and services rely on vulnerable employees handing over the keys to the kingdom"
+            },
+            {
+              title: "Sharepoint and OneDrive :",
+              content:
+                "Limiting the duration for external data shares can help prevent data exposure weeks and months after the share was created. Versioning can help ensure protection from accidental data loss or ransomware infection."
+            },
+            {
+              title: "Exchange Online :",
+              content:
+                "Email encryption, mailbox management limitations, and outbound spam filtering can help ensure your systems aren’t compromised with a persistent threat. Anti-phishing and anti-malware protections can further protect your team from email compromise."
+            },
+            {
+              title: "Auditing and Reporting :",
+              content:
+                "Logging of access, policy changes, and rule creation can help keep systems secure and provide additional information should a breach occur. By reviewing malware threats and provisioning reports, intrusion attempts can be halted before sensitive data is stolen."
+            },
+            {
+              title: "Microsoft Teams :",
+              content:
+                "Disabling file sharing and storage can help keep sensitive data safe. Additional steps should be taken identifying guess access limitations, external access to communication channels, and 3rd party application integration."
+            }
+          ],
+          advantages: [
+            "OFFICE 365 ADVANCE THREAT PROTECTION",
+            "AZURE INFORMATION PROTECTION P1",
+            "DATA LOSS PREVENTION"
+          ]
+        },
         {
           content: "Cyber Security Consultation",
-          slug: "cyber-security-consultation"
+          slug: "cyber-security-consultation",
+          desc:
+            "A cybersecurity consultant doesn’t work for one company exclusively, but rather is hired by a client to test the organization’s cybersecurity measures, and then design and implement a better defense. These consultants are sometimes known by different names, such as:",
+          features: [
+            { title: "1. ", content: "Information security consultant" },
+            { title: "2. ", content: "Computer security consultant" },
+            { title: "3. ", content: "Database security consultant" },
+            { title: "4. ", content: "Network security consultant" }
+          ],
+          advantages: [
+            "COST REDUCTION",
+            "RISK REDUCTION",
+            "NEW TECHNOLOGIES",
+            "ENHANCE YOUR STAFF WITH CYBERSECURITY CONSULTING MANAGEMENT"
+          ]
         },
-        { content: "CISO as a Service", slug: "ciso-service" },
-        { content: "GDPR Assessment", slug: "gdpr-assessment" },
-        { content: "IT Audit", slug: "it-audit" },
+        {
+          content: "CISO as a Service",
+          slug: "ciso-service",
+          desc:
+            "CISO-as-a-Service (CISOaaS) involves outsourcing the IT security leadership responsibilities to a third-party provider. During the past  12 months, the demand for hiring a third-party provider to support implementing an IT security strategy has been growing significantly. With cyberattacks on the rise, it has now become more evident that IT security should be centered at the core of any business strategy. Therefore, CISOaaS might just be the needed solution for small and midsized companies, with a limited IT organization, competence or need. CISO service offering is defined by seven main characteristics:  ",
+          features: [
+            {
+              title: "Security by design :",
+              content:
+                "ensure that information security is activated throughout all organizational levels and is aligned with the risk strategy and the business mission, right from the planning stage of any new business initiative."
+            },
+            {
+              title: "Resource optimization :",
+              content:
+                "information security is aligned with financial goals and strategies to achieve higher returns in the face of change."
+            },
+            {
+              title: "Leading-edge security :",
+              content:
+                " develop incident response plan on top of preventive measures to adapt to the new risk landscape, adopting zero trust architecture to critical data."
+            },
+            {
+              title: "Next-generation threats :",
+              content:
+                "monitor new technological trends, such as cloud technology, surveillance, digital payments, new regulatory requirements and adapt security systems, including Identity Access Management given new risks."
+            },
+            {
+              title: "Human-centered transformation :",
+              content:
+                "bridge IT, business and people to mitigate insider risk and strengthen the incident response. "
+            },
+            {
+              title: "Skillset development :",
+              content:
+                " conduct education and awareness programs, as well as regular monitoring, testing and reporting of day-to-day security staff behavior to ensure the correct execution of the security plan."
+            },
+            {
+              title: "Long-term vision :",
+              content:
+                "ensure knowledge sharing after the end of partnership to ensure a seamless management transition from temporary to a permanent CISO."
+            }
+          ],
+          advantages: [
+            "ELASTIC AND SCALABLE",
+            "RECEIVE BURSTS OF SUPPLY ACCORDING TO DEMAND",
+            "ACCESS TO SPECIALISTS YOU NORMALLY COULDN'T AFFORD"
+          ]
+        },
+        {
+          content: "GDPR Assessment",
+          slug: "gdpr-assessment",
+          desc:
+            "General Data Protection Regulation (GDPR) is a European Union (EU) data protection law that was signed into law on the 25th of May, 2018 to replace the Data Protection Directives of 1995. The GDPR law aims to give people, mostly Europeans total control of their personal data. Data privacy has always been a major talking point over the years in the countries that make up the European Union. And so if anything,  GDPR has united the EU member states in regards to data privacy.It is not an understatement when we say that GDPR is the toughest data security law in the world. This is because this security law applies to organizations in and out of the European Union (EU). As long as those companies deal with the data of EU citizens, GDPR directives apply to them as well. When we say Organizations that deal with data, we mean any organization that collects, stores, and shares across different channels or platforms. Heavy fines and sanctions will be leveled on companies that violate this ruling. Another reason why the data privacy law is considered to be a very tough one is that it doesn’t only protect European citizens that live in EU member states, but also protects all Europeans whether you are physically present in those states or not. The data privacy law follows them around the world, at least in theory.",
+          advantages: [
+            "PROTECTING INFORMATIONS",
+            "IMPLEMENTING SECURITY MEASURES",
+            "OPERATING TO THE HIGHEST STANDARDS"
+          ]
+        },
+        {
+          content: "IT Audit",
+          slug: "it-audit",
+          desc:
+            "An IT audit is the examination and evaluation of an organization's information technology infrastructure, policies and operations.Information technology audits determine whether IT controls protect corporate assets, ensure data integrity and are aligned with the business's overall goals. IT auditors examine not only physical security controls, but also overall business and financial controls that involve information technology systems.Because operations at modern companies are increasingly computerized, IT audits are used to ensure information-related controls and processes are working properly. The primary objectives of an IT audit include:",
+          features: [
+            {
+              title: "1.",
+              content:
+                "Evaluate the systems and processes in place that secure company data."
+            },
+            {
+              title: "2.",
+              content:
+                "Determine risks to a company's information assets, and help identify methods to minimize those risks."
+            },
+            {
+              title: "3.",
+              content:
+                "Ensure information management processes are in compliance with IT-specific laws, policies and standards."
+            },
+            {
+              title: "4.",
+              content:
+                "Determine inefficiencies in IT systems and associated management."
+            }
+          ],
+          advantages: [
+            "CHECKS SUSCEPTIBILITY TO THREAT",
+            "EVALUATING THE SYSTEM",
+            "DATA SECURITY"
+          ]
+        },
         {
           content: "ISO 22301 Implementation Assistance",
-          slug: "iso-22301-implementation"
+          slug: "iso-22301-implementation",
+          desc:
+            "ISO 22301 is the international standard that helps organizations put business continuity plans in place to protect them, and help them recover from, disruptive incidents when they happen. It also helps you to identify potential threats to your business and to build the capacity to deal with unforeseen events. It helps you to protect your business and your reputation, stay agile and resilient, and to minimize the impact of unexpected interruptions. Whether your business is large or small, the ability to respond quickly and effectively to the unexpected is the key to the survival of any organization. This is why having a robust business continuity management system in place, such as ISO 22301, can be considered as one of the most comprehensive approaches to organizational resilience.",
+          advantages: ["PROTECT ASSETS, TURNOVER AND PROFITS"]
         },
         {
           content: "ISO 27001 Implementation Assistance",
-          slug: "iso-27001-implementation"
+          slug: "iso-27001-implementation",
+          desc:
+            "When it comes to keeping information assets secure, organizations can rely on the ISO/IEC 27000 family. ISO/IEC 27001 is widely known, providing requirements for an information security management system (ISMS), though there are more than a dozen standards in the ISO/IEC 27000 family. Using them enables organizations of any kind to manage the security of assets such as financial information, intellectual property, employee details or information entrusted by third parties.",
+          advantages: [
+            "PROTECT YOUR REPUTATION FROM SECURITY THREATS",
+            "AVOID REGULATORY FINES",
+            "IMPROVE YOUR STRUCTURE AND FOCUS"
+          ]
         },
-        { content: "Vendor Risk Assessment", slug: "vendor-risk-assessment" }
+        {
+          content: "Vendor Risk Assessment",
+          slug: "vendor-risk-assessment",
+          desc:
+            "Vendor risk assessment (VRA), also known as vendor risk review, is the process of identifying and evaluating potential risks or hazards associated with a vendor's operations and products and its potential impact on your organization. When you perform a third-party vendor risk assessment, you determine the most likely effects of uncertain events, and then identify, measure, and prioritize them. Potential risks include the accuracy and reliability of operational, customer, and financial information; security breaches, operations effectiveness; and legal and regulatory compliance. By performing vendor due diligence and monitoring (particularly of those that impact your operations), you can help mitigate those risks and provide a solid foundation for productive relationships.",
+          advantages: [
+            "IMPROVE THE QUALITY OF YOUR SERVICES",
+            "REDUCE COST",
+            "EXPAND THE AVAILABILITY OF YOUR SERVICES"
+          ]
+        }
       ]
     },
     {
