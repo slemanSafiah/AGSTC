@@ -58,9 +58,9 @@ export default function Section1() {
       </ScrollAnimation>
       <div className="buttons">
         <ScrollAnimation
-          animateOnce={true}
           initiallyVisible={true}
-          animateIn="bounceInLeft"
+          animateIn="fadeIn"
+          animateOut="fadeOut"
           duration={1}
           delay={900}
         >
@@ -69,9 +69,9 @@ export default function Section1() {
           </a>
         </ScrollAnimation>
         <ScrollAnimation
-          animateOnce={true}
           initiallyVisible={true}
-          animateIn="bounceInLeft"
+          animateIn="fadeIn"
+          animateOut="fadeOut"
           duration={1}
           delay={500}
         >
