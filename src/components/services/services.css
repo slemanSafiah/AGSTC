@@ -1,6 +1,6 @@
 :root {
-  --header_title: rgb(3, 2, 39);
-  --title: rgb(7, 5, 68);
+  --header_title: #32568b;
+  --title: #5575ad;
   --desc: rgb(17, 17, 22);
 }
 
@@ -77,7 +77,7 @@
 }
 
 .sr-card-button:hover {
-  background: rgb(39, 55, 202);
+  background: #3492fa;
   color: white;
 }
 
@@ -149,7 +149,7 @@
 
 .advantage {
   color: white;
-  background-color: rgb(255, 0, 98);
+  background-color: #de78b3;
   border-radius: 5px;
   padding: 8px 16px;
   margin-right: 1em;
