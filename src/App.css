@@ -4,18 +4,15 @@
 
 :root {
   --sub_title_color: rgb(210, 210, 210);
-  --yellow_title: rgb(255, 204, 0);
-  --sp_service_title: rgb(64, 4, 204);
-  --sp_service_content: rgb(3, 0, 162);
-  --audit_button_border: rgb(220, 3, 111);
-  --linear_title: linear-gradient(to right, rgb(64, 4, 204), rgb(220, 3, 111));
-  --linear-article: linear-gradient(to right, #4b19ff, #3301eb);
-  --reverse_linear_title: linear-gradient(
-    to left,
-    rgb(64, 4, 204),
-    rgb(220, 3, 111)
-  );
-  --articles-card: #0d0072;
+  --yellow_title: #00cba4;
+  --sp_service_title: #007eae;
+  --sp_service_content: #32568b;
+  --audit_button_border: #de78b3;
+  --linear_title: linear-gradient(to right, #9c6cb0, #32568b);
+  --linear-article: linear-gradient(to right, #9c6cb0, #32568b);
+  --reverse_linear_title: linear-gradient(to left, #32568b, #9c6cb0);
+  --articles-card: #32568b;
+  --footer_background: #41586b;
 }
 
 /*? Components */
@@ -32,7 +29,7 @@
 }
 
 .header-background {
-  background-color: #0d0072;
+  background-color: #41586b;
   width: 100%;
   height: 90px;
   position: absolute;
@@ -46,7 +43,7 @@
 .logo {
   width: 25%;
   margin-left: 1em;
-  margin-top: 0.5em;
+  margin-top: 0.02em;
   padding-left: 0.5em;
   color: white;
   font-size: 3rem;
@@ -63,7 +60,7 @@
 }
 
 .nav-bar ul li {
-  padding: 0 2em 1em 2em;
+  padding: 0 2em 0.75em 2em;
   font-size: 0.75rem;
   font-family: poppins;
   color: var(--sub_title_color);
@@ -90,7 +87,7 @@
   bottom: 0px;
   width: 100%;
   height: 300px;
-  background-color: var(--articles-card);
+  background-color: var(--footer_background);
 }
 
 .footer-container {
@@ -188,25 +185,25 @@
 
 @keyframes background {
   0% {
-    background: rgb(64, 4, 204);
+    background: #32568b;
   }
   50% {
-    background: rgb(220, 3, 111);
+    background: #9c6cb0;
   }
   100% {
-    background: rgb(64, 4, 204);
+    background: #32568b;
   }
 }
 
 @keyframes background-article {
   0% {
-    background: rgb(23, 23, 90);
+    background: #32568b;
   }
   50% {
-    background: rgb(11, 11, 133);
+    background: #3492fa;
   }
   100% {
-    background: rgb(23, 23, 90);
+    background: #32568b;
   }
 }
 
@@ -231,9 +228,6 @@
   align-items: center;
   box-shadow: 0px 0px 5px rgb(89, 89, 89);
   margin-bottom: 180px;
-  animation-name: background-article;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
   transition: 0.5s ease-in-out;
 }
 
@@ -254,7 +248,7 @@
 .article-desc {
   text-align: center;
   font-family: Poppins;
-  color: gray;
+  color: #aecaff;
   margin-top: -20px;
   font-size: 0.8rem;
 }
@@ -262,12 +256,17 @@
 .article-button {
   display: inline;
   padding: 10px 15px;
-  background-color: blue;
+  background-color: #2c5186;
   color: white;
   font-size: 0.8rem;
   margin-top: 10px;
   font-family: Poppins;
   border-radius: 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.article-button:hover {
+  background-color: #5676ae;
 }
 
 /*? Pages */
@@ -330,22 +329,21 @@
 }
 
 .button-primary {
-  background-color: rgb(84, 6, 230);
+  background-color: #32adff;
   color: white;
-  box-shadow: 0 0 0 0.1rem rgba(81, 21, 202, 0.5);
+  border: 1px solid none;
 }
 
 .button-secondary {
-  border-color: white;
-  border: 2px solid white;
+  border: 1px solid white;
   color: white;
-  box-shadow: 0 0 0 0.1rem rgba(81, 21, 202, 0.1);
+  box-shadow: 0 0 0 0.05rem rgba(81, 21, 202, 0.1);
 }
 
 .button-primary:hover,
 .button-secondary:hover {
   background-color: white;
-  color: rgb(84, 6, 230);
+  color: #32adff;
 }
 
 .section-2 {
@@ -664,7 +662,7 @@
 
 /* ? Form */
 .contact-us-button {
-  background-color: #2b9630;
+  background-color: #2b9630; 
   color: white;
   font-size: 0.9rem;
   font-weight: 400;

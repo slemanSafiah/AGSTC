@@ -117,12 +117,12 @@
   height: 40px;
   color: white;
   text-align: center;
-  background-color: rgb(21, 197, 56);
+  background-color: #2b9630;
   font-size: 0.9rem;
   font-weight: bold;
   padding: 5px 10px;
   border-radius: 4px;
-  border: 1px solid rgb(21, 197, 56);
+  border: 1px solid #2b9630;
   box-shadow: 0px 0px 3px rgb(106, 106, 106);
   transition: 0.6s ease-in-out;
 }
@@ -132,8 +132,8 @@
 }
 
 .q-table-button:hover {
-  color: rgb(21, 197, 56);
-  border-color: rgb(21, 197, 56);
+  color: #2b9630;
+  border-color: #2b9630;
   background-color: white;
 }
 
