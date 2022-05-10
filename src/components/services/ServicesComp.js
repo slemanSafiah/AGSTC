@@ -498,14 +498,77 @@ export default function ServicesComp() {
     {
       title: "Cyber Process",
       subServices: [
-        { content: "IT Architecture Review", slug: "it-architecture" },
+        {
+          content: "IT Architecture Review",
+          slug: "it-architecture",
+          desc:
+            "IT architecture is a key component in supporting business goals and objectives: ",
+          features: [
+            {
+              title:
+                "Foundation for developing large, complex, distributed systems environment"
+            },
+            { title: "Manage and control complexity in system deployment" },
+            { title: "Basis for determining software and hardware decisions" },
+            { title: "Identify gaps and areas for concern or improvement" },
+            { title: "Optimize return on IT /IS investment" }
+          ],
+          advantages: [
+            "COST SAVING",
+            "BUSINESS PROCESS RE-ENGINEERING",
+            "ENSURE BUSINESS PROGRAM DRIVE IT PLANS"
+          ]
+        },
         {
           content: "Cloud Security Assessment",
-          slug: "cloud-security-assessment"
+          slug: "cloud-security-assessment",
+          desc:
+            "A cloud security assessment is an evaluation that tests and analyzes an organization’s cloud infrastructure to ensure the organization is protected from a variety of security risks and threats. The assessment is designed to: Identify weaknesses and potential points of entry within the organization’s cloud infrastructure.Analyze the network for evidence of exploitation. Outline approaches to prevent future attacks. A cloud security assessment typically focuses on the following seven areas:",
+          features: [
+            {
+              title: "Overall security posture : ",
+              content:
+                "Conduct interviews and a documentation review to evaluate the security of enterprise cloud infrastructure"
+            },
+            {
+              title: "Access control and management : ",
+              content:
+                "Review identity and access management, including user accounts, roles, and key management"
+            },
+            {
+              title: "Network security : ",
+              content:
+                "Review segmentation and firewall policies against common misconfigurations"
+            },
+            {
+              title: "Incident management : ",
+              content:
+                "Review incident response policy related to cloud infrastructure, including roles and processes related to an incident"
+            },
+            {
+              title: "Storage security : ",
+              content:
+                "Assess posture of cloud storage including object-level storage, block-level storage, and related snapshots"
+            },
+            {
+              title: "Platform services security : ",
+              content:
+                "Review security configuration of advanced service offerings specific to each cloud service provider"
+            },
+            {
+              title: "Workload security : ",
+              content:
+                "Review security for workloads including virtualized servers, server-hosted containers, functions, and serverless containerized workloads"
+            }
+          ],
+          advantages: ["REDUCE RISKS", "IMPROVED RESILIENCE", "EFFICIENT"]
         },
         {
           content: "Privacy Impact Assessment",
-          slug: "privacy-impact-assessment"
+          slug: "privacy-impact-assessment",
+          desc:
+            "The instrument for a privacy impact assessment (PIA) or data protection impact assessment (DPIA) was introduced with the General Data Protection Regulation (Art. 35 of the GDPR). This refers to the obligation of the controller to conduct an impact assessment and to document it before starting the intended data processing. One can bundle the assessment for several processing procedures. Basically, a data protection impact assessment must always be conducted when the processing could result in a high risk to the rights and freedoms of natural persons. The assessment must be carried out especially if one of the rule examples set forth in Art. 35(3) of the GDPR is relevant. In order to specify the open-ended wording of the law regarding the basic obligation to perform a privacy impact assessment, the supervisory authorities are involved. In a first draft, the Article 29 Working Party created a catalogue of ten criteria which indicate that the processing bears a high risk to the rights and freedoms of a natural person. These are for example scoring/profiling, automatic decisions which lead to legal consequences for those impacted, systematic monitoring, processing of special personal data, data which is processed in a large scale, the merging or combining of data which was gathered by various processes, data about incapacitated persons or those with limited ability to act, use of newer technologies or biometric procedures, data transfer to countries outside the EU/EEC and data processing which hinders those involved in exercising their rights. A privacy impact assessment is not absolutely necessary if a processing operation only fulfils one of these criteria. However, if several criteria are met, the risk for the data subjects is expected to be high and a data protection impact assessment is always required. If there is doubt and it is difficult to determine a high risk, a DPIA should nevertheless be conducted. This process must be repeated at least every three years.",
+          advantages: ["IDENTIFY AND MITIFGATE PRIVACY RISKS"]
         }
       ]
     },
@@ -514,22 +577,86 @@ export default function ServicesComp() {
       subServices: [
         {
           content: "Digital Forensics Readiness Investigation (DFRI)",
-          slug: "digital-forensics-readiness-investigation"
+          slug: "digital-forensics-readiness-investigation",
+          desc:
+            "What is digital forensics readiness? Digital forensics readiness is the ability of organizations to respond quickly and collect digital evidence related to a security incident with minimal cost or interruption to the ongoing business.",
+          features: [
+            {
+              title: "1. ",
+              content:
+                "Digital forensics readiness is the ability of organizations to respond in a timely manner along with the necessary pieces of evidence in case of an incident."
+            },
+            {
+              title: "2. ",
+              content:
+                "Implementing digital forensics readiness should be incorporated in the existing security posture as per the existing processes and procedures."
+            },
+            {
+              title: "3. ",
+              content:
+                "The inclusion or exclusion of any service affects the overall costing of digital forensic readiness assessment and is subjected to interpretation."
+            },
+            {
+              title: "4. ",
+              content:
+                "We will evaluate the current state of logs and other evidence, verify the legitimacy of the same, and will provide a readiness score accordingly."
+            }
+          ],
+          advantages: [
+            "BLOCKING THE OPPORTUNITY FOR MALICIOUS",
+            "REDUCING COST",
+            "PREPARING FOR THE POTENTIAL NEED FOR DIGITAL EVIDENCE"
+          ]
         },
         {
           content: "Incident Handling and Response",
-          slug: "incident-handling-and-response"
+          slug: "incident-handling-and-response",
+          desc:
+            "Incident Response :It is a set of technical activities done in order to analyze, detect, defend against, and respond to an incident. It is a part of the incident handling and incident management process. It is often used in synchrony with the term incident handling. where the refers to a set of practices, processes, and solutions that enable teams to detect, investigate, and respond to incidents. It is a critical element for businesses of all sizes and a requirement for meeting most data compliance standards. ,Both incident handling and incident response go hand in hand. It is often assumed as one function for better ease in processes. This is where incident management comes in. Incident management is the scope of having both incident response and incident handling come together to ensure the end-to-end process, right from reporting an issue to planning and resolving the issue.",
+          advantages: ["INITIAL RESPONSE STATISTICS", "REPOTRING", "FEEDBACK"]
         },
-        { content: "Web Application Audit", slug: "web-application-audit" },
+        {
+          content: "Web Application Audit",
+          slug: "web-application-audit",
+          desc:
+            "web application audit is to review an application’s codebase to determine whether the code is doing something it shouldn’t. Audits may also evaluate whether code can be manipulated to do something inappropriate and whether the apps may be communicating sensitive data in the clear. A superior web application audit should identify whether developers have implemented appropriate security precautions.Typically, a web application audit will include “white box” automated testing that examines code from the inside, and “black box” testing that examines applications from the outside while in production.",
+          advantages: [
+            "SAVES FINANCIAL RESOURCES",
+            "VALIDATE THE SECURITY POSTURE",
+            "IDENTIFY AND RESOLVE ISSUES INSECURITY POLICIES"
+          ]
+        },
         {
           content: "Vulnerability Assessment and Penetration Testing (VAPT)",
-          slug: "vapt"
+          slug: "vapt",
+          desc:
+            "Vulnerability Assessment and Penetration Testing (VAPT) describes a broad range of security assessment services designed to identify and help address cyber security exposures across an organisation’s IT estate. To ensure that you choose the right type of assessment for your company’s needs, it’s important to understand the various types of VAPT services and the differences between them. The diverse nature of VAPT assessments means that they can vary significantly in depth, breadth, scope and price, so this understanding is critical to ensure tests deliver the best value for money.",
+          advantages: [
+            "PROTECTS ADATA FROM OUTBREAKS",
+            "PROTECTS APPLICATION AND NETWORK",
+            "DEFINES THE RISK LEVEL"
+          ]
         },
         {
           content: "Mobile Application Penetration Testing (MAPT)",
-          slug: "mapt"
+          slug: "mapt",
+          desc:
+            "Mobile app penetration testing reveals vulnerabilities in the cyber security posture of a mobile application. Most commonly, it is the safety and security of iOS and Android applications that requires assessment.It is important for both developers and consumers of mobile applications, that appropriate levels of security exist. This is especially the case for applications that handle sensitive data and functionality. Mobile application security testing gives assurance that the expected security protections exist and are effective.",
+          advantages: [
+            "IDENTIFICATION OF SECURITY ISSUES",
+            "IMPROVE PRODUCTIVITY",
+            "SAFEGUARDING THE INTEGRITY"
+          ]
         },
-        { content: "Red Team Assessment", slug: "red-team-assessment" }
+        {
+          content: "Red Team Assessment",
+          slug: "red-team-assessment",
+          desc:
+            "A red team assessment is a goal-based adversarial activity that requires a big-picture, holistic view of the organization from the perspective of an adversary. This assessment process is designed to meet the needs of complex organizations handling a variety of sensitive assets through technical, physical, or process-based means. The purpose of conducting a red teaming assessment is to demonstrate how real world attackers can combine seemingly unrelated exploits to achieve their goal. It is an effective way to show that even the most sophisticated firewall in the world means very little if an attacker can walk out of the data center with an unencrypted hard drive. Instead of relying on a single network appliance to secure sensitive data, it’s better to take a defense in depth approach and continuously improve your people, process, and technology.",
+          advantages: [
+            "DETECT, RESPOND AND PREVENT SOPHISTICATED AND TARGETED THREATS"
+          ]
+        }
       ]
     }
   ];
