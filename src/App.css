@@ -12,7 +12,7 @@
   --linear-article: linear-gradient(to right, #9c6cb0, #32568b);
   --reverse_linear_title: linear-gradient(to left, #32568b, #9c6cb0);
   --articles-card: #32568b;
-  --footer_background: #41586b;
+  --footer_background: #26293c;
 }
 
 /*? Components */
@@ -29,7 +29,7 @@
 }
 
 .header-background {
-  background-color: #41586b;
+  background-color: var(--footer_background);
   width: 100%;
   height: 90px;
   position: absolute;
@@ -576,7 +576,7 @@
   font-family: Poppins;
   margin-bottom: 4em;
   letter-spacing: 1px;
-  color: var(--sub_title_color);
+  color: #a9aabc;
 }
 
 .about-content {
@@ -662,7 +662,7 @@
 
 /* ? Form */
 .contact-us-button {
-  background-color: #2b9630; 
+  background-color: #2b9630;
   color: white;
   font-size: 0.9rem;
   font-weight: 400;

@@ -12,6 +12,7 @@ export default function ServicesComp() {
         {
           content: "IT General Control Testing (ITGC)",
           slug: "it-general-control",
+          images: ["itgc.jpg", "itgc-1.jpg"],
           desc:
             "IT General Controls (ITGC) - ITGC can be defined as internal controls that assure the secure, stable, and reliable performance of computer hardware, software, and IT personnel connected to financial systems. ITGCs include IT risks associated with areas such as the external IT environment, change management, access controls, data backup and recovery, and third-party providers. One of the key factors about ITGC is the relevance it has on the assurance of automated controls, such as those involved with Sarbanes-Oxley Section 404 audits.In case of the absence of ITGC review, statutory auditors cannot rely upon the IT systems that are being used across the business cycles by the client. The controls tested commonly include:",
           features: [

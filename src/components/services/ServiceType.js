@@ -12,6 +12,13 @@ import "swiper/css/autoplay";
 
 import "./swiper.css";
 
+let backgrounds = [
+  "assets/services/audit-1.png",
+  "assets/services/advisory.png",
+  "assets/services/cyber-process.png",
+  "assets/services/4.png"
+];
+
 export default function ServiceType({ title, services, number }) {
   return (
     <div className="sr-type-container">
@@ -19,11 +26,7 @@ export default function ServiceType({ title, services, number }) {
         <li>{title}</li>
       </ul>
       <div className="sr-type-background">
-        <img
-          width={"100%"}
-          src={`assets/services/${number + 1}.png`}
-          alt="title"
-        />
+        <img width={"100%"} src={backgrounds[number]} alt="title" />
       </div>
       <div className="sr-type-slider">
         <Swiper

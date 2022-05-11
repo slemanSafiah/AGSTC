@@ -5,25 +5,22 @@ import Carousel from "react-bootstrap/Carousel";
 export default function Service() {
   const location = useLocation();
   const { service } = location.state;
+
   return (
     <div className="sr-container">
       <div className="service-title">{service.content}</div>
       <div className="service-image-container">
         <Carousel>
-          <Carousel.Item>
-            <img
-              className="service-image"
-              src={`${require("./itgc.jpg")}`}
-              alt="ITGC"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="service-image"
-              src={`${require("./itgc.jpg")}`}
-              alt="ITGC"
-            />
-          </Carousel.Item>
+          {service.images &&
+            service.images.map((img) => (
+              <Carousel.Item>
+                <img
+                  className="service-image"
+                  src={`${require("./images/" + img)}`}
+                  alt="ITGC"
+                />
+              </Carousel.Item>
+            ))}
         </Carousel>
       </div>
       {Boolean(service.desc) && (
