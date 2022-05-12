@@ -49,13 +49,14 @@
 
 .sr-card {
   margin: 10px 4px;
-  width: 250px;
-  height: 250px;
+  width: 270px;
+  height: 290px;
   background: white;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-direction: column;
+  border-radius: 10px;
   box-shadow: 0px 1px 4px rgba(5, 7, 20, 0.575);
   transition: 300ms ease-in-out;
 }
@@ -66,19 +67,51 @@
 
 .sr-card-title {
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   width: 75%;
+  margin-top: 3em;
+}
+
+.sr-card-sub-title {
+  color: #434343;
+  width: 80%;
+  height: 4.5em;
+  line-height: 1.5em;
+  margin-top: 3em;
+
+  font-size: 0.7rem;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.sr-card-desc {
+  height: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .sr-card-button {
+  bottom: 0px;
+  text-align: center;
+  width: 260px;
+  background: #3492fa;
+  color: white;
   border: 1px darkgray solid;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 8px 14px;
+  margin-bottom: 5px;
   transition: 0.3s ease-in-out;
 }
 
 .sr-card-button:hover {
-  background: #3492fa;
+  background: #2b76cc;
   color: white;
 }
 

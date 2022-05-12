@@ -241,7 +241,7 @@
   width: 60px;
   height: 60px;
   border-radius: 100%;
-  background-color: #878787;
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 1px;
   left: 0px;
   right: auto;
@@ -255,7 +255,7 @@
   width: 60px;
   height: 60px;
   border-radius: 100%;
-  background-color: #878787;
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 1px;
   right: 0px;
   left: auto;

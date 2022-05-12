@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Suspense } from "react";
 import { useLocation } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
+import CircularProgress from "@mui/material/CircularProgress";
 
 export default function Service() {
   const location = useLocation();
@@ -9,11 +10,14 @@ export default function Service() {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
+    console.log("loading ...");
     Promise.all(
       service.images.map((img) => {
         return import(`./images/${img}`);
       })
-    ).then((res) => setImages(res));
+    ).then((res) => {
+      setImages(res);
+    });
   }, []);
 
   return (
