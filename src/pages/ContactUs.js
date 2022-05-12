@@ -10,27 +10,20 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
   faLinkedin,
-  faTwitter
+  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
-import Snackbar from "@mui/material/Snackbar";
-import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@mui/icons-material/Close";
-import MuiAlert from "@mui/material/Alert";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Notification from "../components/Notification";
-
-const Alert = React.forwardRef(function Alert(props, ref) {
-  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
-});
+import axios from "axios";
 
 const formSchema = yup.object().shape({
   firstName: yup.string().required(),
   lastName: yup.string().required(),
   email: yup.string().email().required(),
-  message: yup.string().required()
+  message: yup.string().required(),
 });
 
 export default function ContactUs() {
@@ -40,10 +33,10 @@ export default function ContactUs() {
     handleSubmit,
     reset,
     control,
-    formState: { errors }
+    formState: { errors },
   } = useForm({
     defaultValues: { firstName: "", lastName: "", email: "", message: "" },
-    resolver: yupResolver(formSchema)
+    resolver: yupResolver(formSchema),
   });
 
   const handleClose = (event, reason) => {
@@ -60,18 +53,17 @@ export default function ContactUs() {
       <div className="contact-container">
         <div className="contact-form">
           <form
-            onSubmit={handleSubmit((data) => {
+            onSubmit={handleSubmit(async (data) => {
               console.log(data);
-              // let res = await axios({
-              //   method: "post",
-              //   url: `https://www.google.com/recaptcha/api/siteverify?secret=6LffZb4fAAAAAJ_YKcjWsETzWZDOPVzjU3XUaVSp&response=${clientToken}`,
-              //   headers: {
-              //     "Content-Type": "application/x-www-form-urlencoded"
-              //   }
-              // });
+              let res = await axios({
+                method: "post",
+                url: `https://www.google.com/recaptcha/api/siteverify?secret=6LffZb4fAAAAAJ_YKcjWsETzWZDOPVzjU3XUaVSp&response=${clientToken}`,
+                headers: {
+                  "Content-Type": "application/x-www-form-urlencoded",
+                },
+              });
 
-              // if (res.data.success) {
-              if (true) {
+              if (res.data.success) {
                 emailjs
                   .send(
                     "service_0fvgqqp",
@@ -81,7 +73,7 @@ export default function ContactUs() {
                       from_email: data.email,
                       message: data.message,
                       from_subject: "Contact US Message",
-                      email: "slemansafiah43@gmail.com"
+                      email: "slemansafiah43@gmail.com",
                     },
                     "user_iPj4aB9m9VSQ5BsiqgrK3"
                   )
@@ -112,7 +104,7 @@ export default function ContactUs() {
                       marginBlockEnd: 3,
                       paddingInlineEnd: 3,
                       mt: 2,
-                      minWidth: 120
+                      minWidth: 120,
                     }}
                     id="firstName"
                     label="First Name"
@@ -155,7 +147,7 @@ export default function ContactUs() {
                     marginBlockEnd: 3,
                     mt: 2,
                     minWidth: 120,
-                    width: "100%"
+                    width: "100%",
                   }}
                   id="email"
                   label="E-Mail"
@@ -176,9 +168,9 @@ export default function ContactUs() {
                     marginBlockEnd: 4,
                     mt: 2,
                     minWidth: 120,
-                    width: "100%"
+                    width: "100%",
                   }}
-                  id="messsage"
+                  id="message"
                   label="Message"
                   variant="outlined"
                   size="small"
@@ -195,7 +187,7 @@ export default function ContactUs() {
               style={{
                 display: "flex",
                 justifyContent: "space-between",
-                alignItems: "center"
+                alignItems: "center",
               }}
             >
               <div style={{ marginTop: "2em" }}>
@@ -223,7 +215,7 @@ export default function ContactUs() {
           <div
             style={{
               paddingTop: "4em",
-              fontFamily: "Poppins"
+              fontFamily: "Poppins",
             }}
           >
             <Stack columnGap={16} direction={"row"}>

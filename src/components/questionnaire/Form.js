@@ -22,7 +22,7 @@ const formSchema = yup.object().shape({
   "Last Name": yup.string().required(),
   "First Name": yup.string().required(),
   "Phone Number": yup.string().min(8).required(),
-  Email: yup.string().email().required()
+  Email: yup.string().email().required(),
 });
 
 export default function Form() {
@@ -35,10 +35,10 @@ export default function Form() {
     handleSubmit,
     reset,
     control,
-    formState: { errors }
+    formState: { errors },
   } = useForm({
     defaultValues: {},
-    resolver: yupResolver(formSchema)
+    resolver: yupResolver(formSchema),
   });
 
   const handleClose = (event, reason) => {
@@ -59,16 +59,15 @@ export default function Form() {
       <form
         onSubmit={handleSubmit(async (data) => {
           console.log("waiting ...");
-          // let res = await axios({
-          //   method: "post",
-          //   url: `https://www.google.com/recaptcha/api/siteverify?secret=6LffZb4fAAAAAJ_YKcjWsETzWZDOPVzjU3XUaVSp&response=${clientToken}`,
-          //   headers: {
-          //     "Content-Type": "application/x-www-form-urlencoded"
-          //   }
-          // });
+          let res = await axios({
+            method: "post",
+            url: `https://www.google.com/recaptcha/api/siteverify?secret=6LffZb4fAAAAAJ_YKcjWsETzWZDOPVzjU3XUaVSp&response=${clientToken}`,
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+          });
 
-          // if (res.data.success) {
-          if (true) {
+          if (res.data.success) {
             let modifiedData = [];
             function divIt(obj) {
               if (typeof obj === "object") {
@@ -110,7 +109,7 @@ export default function Form() {
                   message: modifiedData,
                   from_subject:
                     "Questionnaire Request From " + data["Organization Name"],
-                  email: "slemansafiah43@gmail.com"
+                  email: "slemansafiah43@gmail.com",
                 },
                 "user_iPj4aB9m9VSQ5BsiqgrK3"
               )
@@ -195,7 +194,7 @@ export default function Form() {
                   border: "none",
                   borderRadius: "2px",
                   padding: "6px 26px",
-                  boxShadow: "0px 1px 3px rgb(50,50,50)"
+                  boxShadow: "0px 1px 3px rgb(50,50,50)",
                 }}
                 label="SEND"
                 type="submit"
@@ -248,7 +247,7 @@ export default function Form() {
                     MPLS: false,
                     "Leaded Line": false,
                     "IPSec VPN": false,
-                    "Other Connections": false
+                    "Other Connections": false,
                   });
                   setType("");
                   setSelected(false);
@@ -262,7 +261,7 @@ export default function Form() {
                   border: "none",
                   borderRadius: "2px",
                   padding: "6px 26px",
-                  boxShadow: "0px 1px 3px rgb(50,50,50)"
+                  boxShadow: "0px 1px 3px rgb(50,50,50)",
                 }}
                 label="RESET"
                 type="button"
