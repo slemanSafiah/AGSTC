@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -9,7 +9,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
-
 import "./swiper.css";
 
 let backgrounds = [
@@ -41,13 +40,16 @@ export default function ServiceType({ title, services, number }) {
             <SwiperSlide>
               <div className="sr-card">
                 <div className="sr-card-title">{service.content}</div>
-                <Link
-                  className="sr-card-link"
-                  to={`/service/${service.slug}`}
-                  state={{ service }}
-                >
-                  <div className="sr-card-button"> Details </div>
-                </Link>
+                <div className="sr-card-desc">
+                  <div className="sr-card-sub-title">{service.desc}</div>
+                  <Link
+                    className="sr-card-link"
+                    to={`/service/${service.slug}`}
+                    state={{ service }}
+                  >
+                    <div className="sr-card-button"> Details </div>
+                  </Link>
+                </div>
               </div>
             </SwiperSlide>
           ))}

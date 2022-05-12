@@ -1,6 +1,7 @@
 import React, { useState, useEffect, Suspense } from "react";
 import { useLocation } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
+import CircularProgress from '@mui/material/CircularProgress';
 
 export default function Service() {
   const location = useLocation();
