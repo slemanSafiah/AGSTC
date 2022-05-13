@@ -6,12 +6,12 @@ export default function Footer() {
       <div className="footer">
         <div>
           <div className="footer-title">AGCTS</div>
-          <div className="footer-desc">Cybersecurity & IT Solution Company</div>
+          <div className="footer-desc">Cybersecurity Solution & Services</div>
         </div>
         <div className="footer-contact">
-          <div>Office phone : +9715 65268 554</div>
-          <div>Sales : Mukesh_kunar@appareluae.com</div>
-          <div>Support : Mukesh_kunar@appareluae.com</div>
+          <div>Office phone : +971-4 813 6367</div>
+          <div>Email : inquiry@agcts.net</div>
+
           <div>
             Location : Plot No S21317, Jebel Ali South Freezone Extention, Opp
             Panasonic,Dubai
