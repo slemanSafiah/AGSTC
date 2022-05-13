@@ -41,7 +41,7 @@ export default function Section1() {
 
       <div className="title">AG CTS</div>
 
-      <div className="sub-title">Cyber Security & IT Solution Company</div>
+      <div className="sub-title">Cyber Security Solution & Services</div>
 
       <div className="buttons">
         <a style={{ textDecoration: "none" }} href="/#information">

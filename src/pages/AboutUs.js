@@ -26,82 +26,61 @@ export default function AboutUs() {
       title: "CTO of the AGCTS",
       img: "assets/about/img3.jpg"
     },
-    { name: "John Doe", title: "Media Manager", img: "assets/about/img4.jpg" },
-    { name: "John Doe", title: "Sales Manager", img: "assets/about/img1.jpg" },
-    {
-      name: "John Doe",
-      title: "CEO of the AGCTS",
-      img: "assets/about/img2.jpg"
-    },
-    {
-      name: "John Doe",
-      title: "CTO of the AGCTS",
-      img: "assets/about/img3.jpg"
-    },
     { name: "John Doe", title: "Media Manager", img: "assets/about/img4.jpg" }
   ];
 
   return (
     <div>
       <Header background={true} page="about-us" />
+      <img
+        className="about-background"
+        src="assets/about/about-us-1.png"
+        alt="about us page"
+      />
       <div className="about-container">
-        <div className="about-title">AG CTS</div>
-        <ScrollAnimation
-          initiallyVisible={true}
-          animateIn="fadeIn"
-          animateOut="fadeOut"
-          duration={1}
-        >
-          <div className="about-subtitle">
-            Cybersecurity & IT Solutions Company
-          </div>
-        </ScrollAnimation>
+        <div className="about-title">AGCTS</div>
+        <div className="about-sub-title">
+          Cyber Security Solutions & Services
+        </div>
         <div className="about-content">
-          <div className="about-content-text">
-            Anim amet aliquip culpa magna fugiat enim occaecat cupidatat
-            incididunt consectetur commodo. Deserunt eu officia dolor commodo
-            aliquip exercitation ut Lorem veniam ut nulla fugiat sint irure.
-            Nisi quis mollit irure aliqua elit sunt labore Lorem exercitation.
-            Consequat veniam cillum cupidatat mollit enim ex ex exercitation. Ad
-            fugiat nostrud excepteur proident tempor sitm cupidatat mollit enim
-            ex ex exercitation. Ad fugiat nostrud excepteur proidentxcepteur
-            proident tempor sitm cupidatat molli. Ad fugiat ex tempor sit.
+          <div>
+            1. We follow the industry best practices aligned with your business
           </div>
-
-          <div className="about-content-image">
-            <img
-              width={"100%"}
-              height="380px"
-              src="assets/about/about.jpg"
-              alt="cybersecurity"
-            />
+          <div>
+            2. Trusted and reliable services to enhance your business growth
+          </div>
+          <div>
+            3. Certified and experienced professional to prove state of the art
+            consulting services
+          </div>
+          <div>
+            4. Agile and flexible consulting model so that your business pace is
+            never compromised
+          </div>
+          <div>
+            5. Cost-effective services tailored to needs of organizations of any
+            size and any domain
+          </div>
+          <div>
+            6. Extensive retail, Banking and other international experience
           </div>
         </div>
       </div>
       <div className="emp-title">Team Members of AGCTS</div>
-      <div className="about-slider">
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          slidesPerView={4}
-          spaceBetween={1}
-          navigation
-        >
-          {employees.map((emp) => (
-            <SwiperSlide>
-              <div className="emp-card">
-                <div className="emp-image-container">
-                  <img className="emp-image" src={emp.img} alt="employee" />
-                </div>
-                <div className="emp-background">
-                  <div className="emp-info">
-                    <div className="emp-text">{emp.name}</div>
-                    <div className="emp-text">{emp.title}</div>
-                  </div>
-                </div>
+
+      <div className="emp-cards">
+        {employees.map((emp, index) => {
+          return (
+            <div className="emp-card" key={index}>
+              <div className="emp-card-info">
+                <div className="emp-card-info-name">{emp.name}</div>
+                <div className="emp-card-info-title">{emp.title}</div>
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+
+              <img className="emp-image" src={emp.img} alt="emp" />
+            </div>
+          );
+        })}
       </div>
       <Footer />
     </div>
