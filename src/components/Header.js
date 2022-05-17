@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 export default function Header({ page, background }) {
   console.log(page);
   return (
-    <div className={` ${background ? "header-background" : "header"}`}>
-      <div className="logo">AG CTS</div>
+    <div style={{ position: "fixed", top: "0px" }} className={`header`}>
+      <div className="logo">
+        <span>ag</span> CTS
+      </div>
       <nav className="nav-bar">
         <ul>
           <Link

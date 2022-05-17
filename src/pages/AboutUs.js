@@ -38,10 +38,10 @@ export default function AboutUs() {
         alt="about us page"
       />
       <div className="about-container">
-        <div className="about-title">AGCTS</div>
-        <div className="about-sub-title">
-          Cyber Security Solutions & Services
+        <div className="about-title">
+          <span>ag</span> CTS
         </div>
+        <div className="about-sub-title">Cyber Tech Solutions</div>
         <div className="about-content">
           <div>
             1. We follow the industry best practices aligned with your business

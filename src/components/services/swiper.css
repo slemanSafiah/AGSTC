@@ -17,7 +17,7 @@
   font-style: normal;
 }
 :root {
-  --swiper-theme-color: #e9e9e9;
+  --swiper-theme-color: #a3a3a3;
 }
 .swiper {
   margin-left: auto;
@@ -241,7 +241,6 @@
   width: 60px;
   height: 60px;
   border-radius: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
   padding: 1px;
   left: 0px;
   right: auto;
@@ -255,7 +254,6 @@
   width: 60px;
   height: 60px;
   border-radius: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
   padding: 1px;
   right: 0px;
   left: auto;
