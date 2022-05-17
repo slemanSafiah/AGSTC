@@ -39,9 +39,11 @@ export default function Section1() {
         </Carousel>
       </div>
 
-      <div className="title">AG CTS</div>
+      <div className="title">
+        <span>ag</span> CTS
+      </div>
 
-      <div className="sub-title">Cyber Security Solution & Services</div>
+      <div className="sub-title">Cyber Tech Solution</div>
 
       <div className="buttons">
         <a style={{ textDecoration: "none" }} href="/#information">

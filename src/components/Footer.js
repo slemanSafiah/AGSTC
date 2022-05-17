@@ -5,8 +5,10 @@ export default function Footer() {
     <div className="footer-container">
       <div className="footer">
         <div>
-          <div className="footer-title">AGCTS</div>
-          <div className="footer-desc">Cybersecurity Solution & Services</div>
+          <div className="footer-title">
+            <span>ag</span> CTS
+          </div>
+          <div className="footer-desc">Cybersecurity Tech Solution</div>
         </div>
         <div className="footer-contact">
           <div>Office phone : +971-4 813 6367</div>
